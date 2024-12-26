@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de Adivinar la Palabra</title>
+</head>
+<body>
+    <h1>¡Adivina la palabra!</h1>
+    <p>Intentos restantes: ❤️{{ attempts }}</p>
+    <p>Palabra: {{ display }}</p>
+    <form method="POST">
+        <label for="guess">Adivina una letra:</label>
+        <input type="text" name="guess" id="guess" maxlength="1" required>
+        <button type="submit">Enviar</button>
+    </form>
+    <p>{{ message }}</p>
+    <p>Letras adivinadas: {{ guessed_letters }}</p>
+    <a href="/reset">Reiniciar juego</a>
+</body>
+</html>
